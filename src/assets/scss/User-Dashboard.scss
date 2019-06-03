@@ -1,0 +1,89 @@
+/*!
+code by: Hiếu Trần - Tri Bùi
+Vs 1.0
+ */
+
+ @import 'User-Dashboard/variables';
+ @import 'User-Dashboard/mixins';
+ 
+ // Plugins CSS
+ @import 'User-Dashboard/plugins/plugin-animate-bootstrap-notify';
+ @import 'User-Dashboard/plugins/plugin-react-bootstrap-wizard';
+ @import 'User-Dashboard/plugins/plugin-react-table';
+ @import 'User-Dashboard/plugins/plugin-react-big-calendar';
+ @import 'User-Dashboard/plugins/plugin-react-jvectormap';
+ @import 'User-Dashboard/plugins/plugin-nouislider';
+ @import 'User-Dashboard/plugins/plugin-perfect-scrollbar';
+ @import 'User-Dashboard/plugins/plugin-react-bootstrap-sweetalert';
+ @import 'User-Dashboard/plugins/plugin-react-bootstrap-switch';
+ @import 'User-Dashboard/plugins/plugin-react-datetime';
+ @import 'User-Dashboard/plugins/plugin-react-tagsinput';
+ @import 'User-Dashboard/plugins/plugin-react-select';
+ 
+ 
+ // Core CSS
+ @import 'User-Dashboard/nucleo-outline';
+ @import 'User-Dashboard/buttons';
+ @import 'User-Dashboard/social-buttons';
+ @import 'User-Dashboard/animated-buttons';
+ @import 'User-Dashboard/inputs';
+ @import 'User-Dashboard/typography';
+ @import 'User-Dashboard/misc';
+ @import 'User-Dashboard/misc-extend';
+ @import 'User-Dashboard/navbar';
+ @import 'User-Dashboard/dropdown';
+ @import 'User-Dashboard/alerts';
+ @import 'User-Dashboard/images';
+ @import 'User-Dashboard/tables';
+ @import 'User-Dashboard/footers';
+ @import 'User-Dashboard/fixed-plugin';
+ 
+ // components
+ @import 'User-Dashboard/checkboxes-radio';
+ @import 'User-Dashboard/progress';
+ @import 'User-Dashboard/badges';
+ @import 'User-Dashboard/pagination';
+ @import 'User-Dashboard/info-areas';
+ @import 'User-Dashboard/pills';
+ @import 'User-Dashboard/tabs';
+ @import 'User-Dashboard/popups';
+ @import 'User-Dashboard/modals';
+ @import 'User-Dashboard/carousel';
+ @import 'User-Dashboard/sidebar-and-main-panel';
+ @import 'User-Dashboard/timeline';
+ @import 'User-Dashboard/fileupload';
+ 
+ 
+ 
+ // cards
+ @import 'User-Dashboard/cards';
+ @import "User-Dashboard/cards/card-chart";
+ @import "User-Dashboard/cards/card-map";
+ @import "User-Dashboard/cards/card-user";
+ 
+ @import "User-Dashboard/cards/card-background";
+ @import "User-Dashboard/cards/card-collapse";
+ @import "User-Dashboard/cards/card-contributions";
+ @import "User-Dashboard/cards/card-info-area";
+ @import "User-Dashboard/cards/card-lock";
+ @import "User-Dashboard/cards/card-pricing";
+ @import "User-Dashboard/cards/card-profile";
+ @import "User-Dashboard/cards/card-signup";
+ @import "User-Dashboard/cards/card-stats-mini";
+ @import "User-Dashboard/cards/card-stats";
+ @import "User-Dashboard/cards/card-subcategories";
+ @import "User-Dashboard/cards/card-testimonials";
+ @import "User-Dashboard/cards/card-tasks";
+ 
+ 
+ 
+ // example pages and sections
+ @import 'User-Dashboard/example-pages';
+ @import 'User-Dashboard/sections';
+ 
+ 
+ @import 'User-Dashboard/responsive';
+ @import 'User-Dashboard/media-queries';
+ 
+ // profile
+ @import "User-Dashboard/Profile/Profile";

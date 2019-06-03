@@ -1,0 +1,210 @@
+.maincontent
+{
+   
+    margin-top:75px;
+
+}
+.boxmain
+{
+    padding-right:0px;
+    /*padding-top: 15px;*/
+    /*padding-top: 5px;*/
+    margin-top:40px
+}
+.listavailable
+{
+    /* background-color: #FFFFFF;*/
+    /*margin-top: 20px;*/
+}
+.tablemyrewards {
+    border-collapse: collapse;
+    width: 100%;
+    margin-top:0px;
+}
+.rewardsummarybox
+{
+    border-radius: 10px;
+    -moz-border-radius: 10px;
+    -webkit-border-radius: 10px;
+}
+.rewardsummaryboxheader
+{
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    -webkit-border-top-left-radius: 10px;
+    -webkit-border-top-right-radius: 10px;
+    -moz-border-top-left-radius: 10px;
+    -moz-border-top-right-radius: 10px;
+    background-color:#0c3357;
+    text-align:center;
+}
+.textrewardsummaryboxheader 
+{
+        font-size: 14px;  
+      color: #fff;
+    }
+    .rewardsummaryboxcontent
+    {
+       
+        background-color:#ffffff;
+        border-bottom-left-radius: 10px;
+        border-bottom-right-radius: 10px;
+        -webkit-border-bottom-left-radius: 10px;
+        -webkit-border-bottom-right-radius: 10px;
+        -moz-border-bottom-left-radius: 10px;
+        -moz-border-bottom-right-radius: 10px;
+    }
+    .thongtindiemthuong{
+        width:25%;
+        text-align: center;
+    }
+    .classtexttitle {
+        position: relative;
+        top: 8px;
+    }
+        .textpoint{    
+        color: #ee661a;
+        font-size: 30px;
+        font-weight: bold;
+        text-align: right;
+    }
+    .pull-lefth {
+        float: left;
+    }
+    .img-reward-icon-1 {
+        height: 165px;
+        width: auto;
+    }
+    .li{
+        padding: 5px 0px;
+        color: #204160;
+        font-size: 18px;
+    }
+    .pull-clear{
+        lear: both;
+    }
+    .pull-right {
+        float: right;
+    }
+    .ketqua{
+        margin-top:10px;
+    }
+    .textketqua{
+        font-size:19px;
+    }
+    .textpoint{
+        color: #ee661a;
+        font-size: 20px;
+    }
+    .textcapdo{
+        color:#c6c6c6;
+        font-size:19px;
+    }
+    .buttondoidiem{
+        width:25%;
+        text-align: center;
+        
+    }
+    .textbutton{
+        background: none repeat scroll 0 0 #ee661a;
+        border: 0 none;
+        border-radius: 3px;
+        -moz-border-radius: 3px;
+        -webkit-border-radius: 3px;
+        color: #FFFFFF;
+        font-family: helvetica,verdana,serif;
+        font-size: 18px;
+        padding: 7px 20px;
+        min-width: 150px;
+    }
+    .lhistoryrewardtitlebox {
+        background-color: #0c3357;
+        border-radius: 6px;
+        -moz-border-radius: 6px;
+        -webkit-border-radius: 6px;
+        padding: 10px 20px;
+        margin-top: 20px;
+    }
+    .nkdiem{
+    display: block;
+    width: 200px;
+    text-align: center;
+}
+.headernkdiem{
+    font-size: 18px;
+    /* font-weight: bold; */
+    padding: 10px 5px;
+    color: #ffffff;
+    
+}
+.tablerewardpoint {
+    border-collapse: collapse;
+   
+}
+.td-history-reward-1 {
+    width: 10%;
+    min-width: 56px;
+    padding-left: 23px;
+}
+.td-history-reward-2 {
+    width: 30%;
+    min-width: 250px;
+}
+.reward-category-boundary {
+    /* position: absolute; */
+    height: 56px;
+    width: 56px;
+    background-color: #ee661a;
+    z-index: 0;
+    border-radius: 28px;
+}
+.surveytitle {
+    color: #406c88;
+}
+.td-history-reward-4 {
+    width: 15%;
+    min-width: 100px;
+}
+.td-history-reward-3 {
+    width: 20%;
+    min-width: 150px;
+    text-align: center;
+}
+.td-history-reward-4 {
+    width: 15%;
+    min-width: 100px;
+    text-align: center;
+}
+td.td-history-reward-5 {
+    width: 15%;
+    min-width: 100px;
+    text-align: right
+}
+.pointvaluemidle {
+    font-size: 21px;
+    color: #ee661a;
+    /* font-weight: bold; */
+}
+.td-history-reward-6 {
+    width: 10%;
+    min-width: 50px;
+    color: #8a959e;
+}
+.lhistoryconverttitlebox {
+    background-color: #0c3357;
+    border-radius: 6px;
+    -moz-border-radius: 6px;
+    -webkit-border-radius: 6px;
+    padding: 10px 20px;
+    margin-top: 20px;
+}
+.header1 {
+    font-size: 18px;
+    /* font-weight: bold; */
+    padding: 10px 5px;
+    color: #ffffff;
+}
+.textthongtingiaithuong{
+   padding-top:20px;
+   padding-bottom:20px;
+}
