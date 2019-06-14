@@ -1,4 +1,5 @@
 import React from "react";
+import classnames from "classnames";
 // reactstrap components
 import {
   Button,
@@ -12,16 +13,17 @@ import {
   Redirect,
 } from "react-router-dom";
 import NotificationAlert from "react-notification-alert";
-import ReCAPTCHA from 'react-grecaptcha';
+// import ReCAPTCHA from 'react-grecaptcha';
 const callback = function () { };
 const expiredCallback = function () { };
 class Logins extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-     
       username: "",
       password: "",
+      usernameState: "",
+      passwordState:"",
       alert_message: "",
       visible: true,
     };
@@ -32,6 +34,42 @@ class Logins extends React.Component {
   componentWillUnmount() {
     document.body.classList.toggle("login-page");
   }
+  verifyLength = (value, length) => {
+    if (value.length >= length) {
+      return true;
+    }
+    return false;
+  };
+  change = (event, stateName, type, stateNameEqualTo, maxValue) => {
+    switch (type) {
+      case "length":
+        if (this.verifyLength(event.target.value, stateNameEqualTo)) {
+          this.setState({ [stateName + "State"]: "has-success" });
+        } else {
+          this.setState({ [stateName + "State"]: "has-danger" });
+        }
+        break;
+      default:
+        break;
+    }
+    this.setState({ [stateName]: event.target.value });
+  };
+  isValidated = () => {
+    if (
+      this.state.usernameState === "has-success" &&
+      this.state.passwordState === "has-success"
+    ) {
+      return true;
+    } else {
+      if (this.state.usernameState !== "has-success") {
+        this.setState({ usernameState: "has-danger" });
+      }
+      if (this.state.passwordState !== "has-success") {
+        this.setState({ passwordState: "has-danger" });
+      }
+      return false;
+    }
+  };
   // thong bao trang thai
   onFail = place => {
     var options = {};
@@ -75,7 +113,7 @@ class Logins extends React.Component {
     return (
       <div className="login-page">
         <NotificationAlert ref="notificationAlert" />
-        {AuthRoute ? (
+{AuthRoute ? (
           <Redirect to={{ pathname: '/user/dashboard' }} />
         ) : (
             <Container>
@@ -90,51 +128,69 @@ class Logins extends React.Component {
                     <CardBody  >
                       <Form action="" className="form" method="" onKeyPress={this.handleKeyPress} >
                         <FormGroup className="has-label">
-                          <InputGroup>
+                          <InputGroup
+                            className={classnames(this.state.usernameState, {
+                              "input-group-focus": this.state.usernameFocus
+                            })}
+                          >
                             <InputGroupAddon addonType="prepend">
                               <InputGroupText>
-                                <i className="far fa-user"></i>
+                                <i className="nc-icon nc-single-02" />
                               </InputGroupText>
                             </InputGroupAddon>
                             <Input
-                              type="text"
                               name="username"
-onChange={this.onChange}
-                              onKeyDown={this.handleKeyPress}
+                              placeholder="User name *"
+                              type="text"
+                              onChange={e => this.change(e, "username", "length", 1)}
+                              onFocus={e => this.setState({ usernameFocus: true })}
+                              onBlur={e => this.setState({ usernameFocus: false })}
                             />
+                            {this.state.usernameState === "has-danger" ? (
+                              <label className="error">This field is required.</label>
+                            ) : null}
                           </InputGroup>
-
                         </FormGroup>
+
+
+
                         <FormGroup className="has-label">
-                          <InputGroup>
+                        <InputGroup
+                            className={classnames(this.state.passwordState, {
+                              "input-group-focus": this.state.passwordFocus
+                            })}
+                          >
                             <InputGroupAddon addonType="prepend">
                               <InputGroupText>
-                                <i className="nc-icon nc-key-25" />
+                                <i className="nc-icon nc-single-02" />
                               </InputGroupText>
                             </InputGroupAddon>
                             <Input
-                              placeholder="Password..."
                               name="password"
+                              placeholder="Pass word"
                               type="password"
-                              onChange={this.onChange}
-                              autoComplete="off"
+                              onChange={e => this.change(e, "password", "length", 1)}
+                              onFocus={e => this.setState({ passwordFocus: true })}
+                              onBlur={e => this.setState({ passwordFocus: false })}
                             />
+{this.state.passwordState === "has-danger" ? (
+                              <label className="error">This field is required.</label>
+                            ) : null}
                           </InputGroup>
-
                         </FormGroup>
                         <br />
-                        <FormGroup>
+                        {/* {/* <FormGroup>
                           <FormGroup check>
                             <Label check>
-                            <ReCAPTCHA
-                          sitekey="6LenMaQUAAAAANkufe5uSE640zvgd7tQD5ddusot"
-                          callback={callback}
-                          expiredCallback={expiredCallback}
-                          locale="en"
-                        />
-                                </Label>
+                              <ReCAPTCHA
+                                sitekey="6LenMaQUAAAAANkufe5uSE640zvgd7tQD5ddusot"
+                                callback={callback}
+                                expiredCallback={expiredCallback}
+                                locale="en"
+                              />
+                            </Label>
                           </FormGroup>
-                        </FormGroup>
+                        </FormGroup> */}
                       </Form>
                       <Button
                         block
@@ -156,7 +212,7 @@ onChange={this.onChange}
                       >
                         Register
                         </Button>
-                      <Button
+                      {/* <Button
                         block
                         id="forgot password"
                         className="btn-round mb-3"
@@ -164,7 +220,7 @@ onChange={this.onChange}
                         onClick={this.forgetClick}
                       >
                         <i className="fas fa-sign-in-alt"></i> Forgot Account
-                          </Button>
+                          </Button> */}
                     </CardBody>
                     <CardFooter>
 
@@ -177,7 +233,7 @@ onChange={this.onChange}
         <div
           className="full-page-background"
           style={{
-backgroundImage: `url(${require("assets/img/bg/login.jpg")})`,
+            backgroundImage: `url(${require("assets/img/bg/login.jpg")})`,
             position: "absolute"
           }}
         />

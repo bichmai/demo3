@@ -3,10 +3,10 @@ import { NavLink } from "react-router-dom";
 import { Nav, Collapse } from "reactstrap";
 // javascript plugin used to create scrollbars on windows
 import PerfectScrollbar from "perfect-scrollbar";
-
 import avatar from "assets/img/faces/ayo-ogunseinde-2.jpg";
 // import favicon from "assets/img/control/favicon-dashboard.png";
 import goldenet from "../../assets/img/control/logo 1.png";
+
 var ps;
 const imgIcon = {
   width: '209px',
@@ -17,14 +17,14 @@ class Sidebar extends React.Component {
     super(props);
     this.state = this.getCollapseStates(props.routes);
     this.state = {
-      name: "thanhnhadev"
+      name: "Developer"
     };
   }
   // this creates the intial state of this component based on the collapse routes
   // that it gets through this.props.routes
   getCollapseStates = routes => {
     let initialState = {};
-    routes.map((prop, key, ) => {
+    routes.map((prop, key) => {
       if (prop.collapse) {
         initialState = {
           [prop.state]: this.getCollapseInitialState(prop.views),
@@ -149,15 +149,7 @@ class Sidebar extends React.Component {
         data-color={this.props.bgColor}
         data-active-color={this.props.activeColor}
       >
-        <div className="logo">
-          {/* <a
-            href="http://owifi.io/"
-            className="simple-text logo-mini"
-          >
-            <div className="logofavicon">
-              <img src={favicon} alt="react-logo" />
-            </div>
-          </a> */}
+        <div className="logo">      
           <a
             href="https://csewallet.io/"
             className="simple-text logo-normal"
@@ -187,21 +179,21 @@ class Sidebar extends React.Component {
                   <b className="caret" />
                 </span>
               </a>
+              
               <Collapse isOpen={this.state.openAvatar}>
                 <ul className="nav">
                   <li>
                     {testProfile === true ? 
                       <NavLink to="/user/user-canhan" activeClassName="">
-                        <span className="sidebar-mini-icon">UC</span>
-                        <span className="sidebar-normal">User Ca Nhan</span>
+                        <span className="sidebar-mini-icon">PU</span>
+                        <span className="sidebar-normal">Persional User</span>
                       </NavLink>
                       :
                       <NavLink to="/user/user-profile" activeClassName="">
-                        <span className="sidebar-mini-icon">UT</span>
-                        <span className="sidebar-normal">User To Chuc</span>
+                        <span className="sidebar-mini-icon">OU</span>
+                        <span className="sidebar-normal">Organization User</span>
                       </NavLink>
-                    }
-                    
+                    }                  
                   </li>
                 </ul>
               </Collapse>

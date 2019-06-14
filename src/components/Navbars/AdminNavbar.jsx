@@ -206,9 +206,7 @@ class AdminNavbar extends React.Component {
                       onClick={this.logOut}
                     >
                       <i className="fas fa-sign-out-alt"></i> Logout
-                    </DropdownItem>
-                    
-                   
+                    </DropdownItem>                                 
                   </DropdownMenu>
                 </UncontrolledDropdown>
               </Nav>

@@ -12,7 +12,7 @@ import {
   Redirect,
 } from "react-router-dom";
 import NotificationAlert from "react-notification-alert";
-import ReCAPTCHA from 'react-grecaptcha';
+// import ReCAPTCHA from 'react-grecaptcha';
 import ModalVndpmt from "../tables/ModalVndpmt";
 import ModalCsepmt from "../tables/ModalCsepmt";
 import ModalPaypalpmt from "../tables/ModalPaypalpmt";
@@ -154,12 +154,12 @@ class Login extends React.Component {
                         <FormGroup>
                           <FormGroup check>
                             <Label check>
-                            <ReCAPTCHA
+                            {/* <ReCAPTCHA
                                 sitekey="6LenMaQUAAAAANkufe5uSE640zvgd7tQD5ddusot"
                                 callback={callback}
                                 expiredCallback={expiredCallback}
                                 locale="en"
-                              />
+                              /> */}
                                 </Label>
                           </FormGroup>
                         </FormGroup>
@@ -185,7 +185,7 @@ class Login extends React.Component {
                       >
                         Register
                         </Button>
-                      <Button
+                      {/* <Button
                         block
                         id="forgot password"
                         className="btn-round mb-3"
@@ -193,7 +193,7 @@ class Login extends React.Component {
                         onClick={this.forgetClick}
                       >
                         <i className="fas fa-sign-in-alt"></i> Forgot Account
-                          </Button>
+                          </Button> */}
                     </CardBody>
                     <CardFooter>
 

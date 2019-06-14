@@ -133,11 +133,11 @@ class AdvertiseVideo extends React.Component {
                       <Link to="/auth/register" ><Button color="primary" outline size="sm">Register</Button></Link>
                     </FormGroup>
                   </Col>
-                  <Col sm="6">
+                  {/* <Col sm="6">
                     <FormGroup className="pull-right">
                       <Button onClick={this.redirectLogin} className="btn-primary" size="sm">Create your E-Voucher</Button>
                     </FormGroup>
-                  </Col>
+                  </Col> */}
                 </Row>
               </Container>
             </Col>
